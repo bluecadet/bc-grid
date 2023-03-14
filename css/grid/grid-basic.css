@@ -1,0 +1,22 @@
+/********************************************
+  Grid
+*********************************************/
+.o-grid {
+  display: grid;
+  gap: 0 $grid-mobile-gutter;
+  grid-template-columns: repeat($grid-columns, 1fr);
+  padding-left: $grid-mobile-margin;
+  padding-right: $grid-mobile-margin;
+  margin: 0 auto;
+
+  @media screen and (min-width: $grid-breakpoint-standard) {
+    gap: 0 $grid-gutter;
+    padding-left: $grid-margin;
+    padding-right: $grid-margin;
+  }
+
+  @media screen and (min-width: $grid-breakpoint-max) {
+    padding-left: var(--bc-grid-max-width-padding);
+    padding-right: var(--bc-grid-max-width-padding);
+  }
+}

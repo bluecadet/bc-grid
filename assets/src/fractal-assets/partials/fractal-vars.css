@@ -1,0 +1,21 @@
+:root {
+  --frctl-color-white: #ffffff;
+  --frctl-color-black: #201D1D;
+  --frctl-color-gray-dark: #404040;
+  --frctl-color-gray-light: #c9c9c9;
+  --frctl-color-gray-border: #858585;
+  --frctl-color-pink: #e14268;
+  --frctl-color-primary-theme: #22458C;
+  --frctl-color-primary-theme-text-on-color: #ffffff;
+
+  /* Code */
+  --frctl-code-text: var(--frctl-color-pink);
+  --frctl-code-background: #EEEEEE;
+
+  /* Fonts */
+  --frctl-font-body:  'Manrope', sans-serif;
+  --frctl-font-title: 'Manrope', sans-serif;
+  --frctl-font-mono:  ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+
+  --frctl-matrix-square-size: 130px;
+}

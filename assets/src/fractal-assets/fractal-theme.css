@@ -1,0 +1,510 @@
+/* stylelint-disable */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap');
+
+@import "partials/fractal-vars.css";
+
+// ----
+// Fractal Theme Overrides
+//
+// This file customizes and overrides some of the default styles provided by
+// Mandelbrot Fractal theme.
+//
+// If you want to add any custom styles for grid items, image alignment,
+// utility classes, etc., add those at the bottom of this file under
+// -> Project Specific Styles
+//
+// Note: Since Fractal is not used in production, all stylelint errors in
+//   this file are ignored.
+// ----
+
+
+// ----
+// DO NOT EDIT BELOW THIS LINE
+// ----
+
+
+// ----
+// Global Styles
+// ----
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  color: var(--frctl-color-black);
+  box-sizing: border-box;
+}
+
+.Frame,
+.Meta-value,
+.Prose,
+.Meta-key,
+.FileBrowser-select-label,
+.FileBrowser-selectWrapper .select2-container,
+.select2-results__option {
+  font-family: var(--frctl-font-body);
+}
+
+.Browser-tab a,
+.Tree-collectionLabel,
+.Pen-preview-size,
+.Status-label,
+.Pen-title {
+  font-family: var(--frctl-font-title);
+  color: var(--frctl-color-black);
+  /* text-transform: uppercase; */
+}
+
+.Tree-title,
+.Tree-entityLink {
+  text-transform: capitalize;
+  font-family: var(--frctl-font-title);
+  color: var(--frctl-color-black);
+  font-weight: normal;
+  letter-spacing: 0;
+}
+
+.Browser-tab.is-active a,
+.Status-label {
+  font-weight: 600;
+}
+
+.Prose h1,
+.Prose h2,
+.Prose h3,
+.Prose h4,
+.Prose h5,
+.Prose h6 {
+  font-family: var(--frctl-font-title);
+  font-weight: normal;
+  color: var(--frctl-color-black);
+}
+
+.Prose {
+  font-size: 16px;
+  padding: 8px 0;
+  max-width: none;
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+  }
+
+  p, h1, h2, h3, h4, h5, h6, ul, ol, code {
+    max-width: 700px;
+    letter-spacing: 0;
+  }
+
+  ul, ol {
+    margin-left: 20px;
+  }
+
+  table + p {
+    margin-top: 30px;
+  }
+
+  code pre {
+    font-size: 12px;
+    padding: 16px;
+    margin: 10px -14px;
+  }
+}
+
+.Prose h1,
+.frctl-h1 {
+  font-size: 48px;
+}
+
+.Prose h2,
+.frctl-h2 {
+  font-size: 39px;
+
+  & + h3 {
+    margin-top: 0;
+  }
+}
+
+.Prose h3,
+.frctl-h3 {
+  font-size: 31px;
+}
+
+.Prose h4 {
+  font-size: 25px;
+}
+
+.Prose h5 {
+  font-size: 20px;
+}
+
+.frctl-h1,
+.frctl-h2,
+.frctl-h3 {
+  font-family: var(--frctl-font-title);
+}
+
+.frctl-h1,
+.frctl-h2 {
+  margin-bottom: 24px;
+}
+
+.frctl-h3 {
+  margin-bottom: 18px;
+}
+
+li.Browser-tab a {
+  font-weight: 400;
+}
+
+.Frame {
+
+  a {
+    color: var(--frctl-color-primary-theme);
+
+    &:hover {
+      color: darken(var(--frctl-color-primary-theme), 10%);
+    }
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 50rem;
+    background-color: rgba(var(--frctl-color-black), 0.15);
+  }
+}
+
+.Pen {
+  background-color: #fbfbfb;
+}
+
+[dir='ltr'] .Preview-handle,
+[dir='ltr'] .Frame-panel--sidebar {
+  border: none;
+}
+
+.Frame-panel--main {
+  box-shadow: 0 0 25px rgba(var(--frctl-color-black), 0.2);
+}
+
+.Frame-panel--sidebar {
+  border: none;
+  background-color: var(--frctl-color-white);
+}
+
+.Status-label {
+  padding: 0.25rem 0.75rem 0.2rem 0.9rem;
+}
+
+.Tree-collectionLabel {
+  font-size: 14px;
+}
+
+// .Tree-entityLink,
+// .Tree-item {
+//   font-size: 13px;
+// }
+
+.Tree-collectionLabel span::before {
+  top: 0.45rem;
+}
+
+.Pen-title {
+  font-family: var(--frctl-font-title);
+  font-weight: normal;
+}
+
+.Document-title {
+  font-family: var(--frctl-font-title);
+  font-weight: normal;
+  font-size: 24px;
+}
+
+// ----
+// Header Styles
+// ----
+.Header {
+  background-color: var(--frctl-color-primary-theme);
+  box-shadow: inset 0 -1px 0 0 rgba(var(--frctl-color-primary-theme-text-on-color), 0.1);
+
+  button {
+    height: 1.5rem;
+    border-color: var(--frctl-color-primary-theme-text-on-color), 0.25 !important;
+  }
+
+  svg {
+    fill:var(--frctl-color-primary-theme-text-on-color) !important;
+  }
+}
+
+.Header-title {
+  font-family: var(--frctl-font-title);
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 0;
+
+  &,
+  &:link {
+    color: var(--frctl-color-primary-theme-text-on-color);
+  }
+}
+
+// ----
+// Component Window Styles
+// ----
+.Preview {
+  border: none;
+}
+
+.frctl-section {
+  padding: 3rem;
+
+  &__entry {
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 0.2rem solid var(--frctl-color-gray-light);
+
+    // span:not(.whitespace):not(.word) {
+    //   display: block;
+    //   margin-top: 0.5rem;
+    // }
+  }
+}
+
+// Code Styles
+.fractal-code {
+  font-family: var(--frctl-font-mono);
+  color: var(--frctl-code-text);
+  background: var(--frctl-code-background);
+  font-size: 1.2rem;
+  padding: 0.2rem;
+}
+
+.fractal-type-size {
+  color: var(--frctl-color-black);
+
+  span {
+    display: inline !important;
+  }
+}
+
+.fractal-label {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+}
+
+// Color Theme Styles
+
+
+/* .color-blocks {
+  overflow: hidden;
+  padding: 3rem;
+}
+
+.color-blocks__inner {
+  margin-right: -1.5rem; // -15px;
+  margin-left: -1.5rem;  // -15px;
+  width: calc(100% + 3rem);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.color-block {
+  // width: 22rem;
+  box-sizing: border-box;
+  margin-bottom: 5rem;
+  padding: 1.5rem;
+  flex-basis: 100%;
+
+  @media screen and (min-width: 600px) {
+    flex-basis: 50%;
+  }
+
+  @media screen and (min-width: 900px) {
+    flex-basis: 33.33333%;
+  }
+
+  @media screen and (min-width: 1100px) {
+    flex-basis: 25%;
+  }
+
+
+  &__tile {
+    width: 100%;
+    padding-bottom: 75%;
+    border-radius: 0.25rem;
+  }
+
+  &__name {
+    font-size: 1.2rem;
+    margin-top: 1.4rem;
+  }
+
+  .fractal-code {
+    font-size: 1rem;
+  }
+} */
+
+// Info Panel Styles
+.Browser-tab {
+  background-color: var(--frctl-color-gray-light);
+
+  &.is-active a,
+  &.is-active a:hover {
+    background-color: var(--frctl-color-white);
+    border-top-color: var(--frctl-color-primary-theme);
+    color: rgba(var(--frctl-color-gray-dark), 1) !important;
+  }
+
+  a {
+    font-weight: bold;
+    border-top: 0.13rem solid transparent;
+    border-bottom: none;
+    color: rgba(var(--frctl-color-gray-dark), 0.6) !important;
+
+    &:hover {
+      border-top-color: rgba(0, 0, 0, 0.15);
+      background-color: rgba(var(--frctl-color-white), 0.25);
+    }
+  }
+}
+
+.Prose {
+
+  p code {
+    font-family: var(--frctl-font-mono);
+    color: var(--frctl-code-text);
+    background: var(--frctl-code-background);
+    font-size: 12px;
+    padding: 2px;
+  }
+}
+
+.Pen-info {
+  border: none;
+}
+
+.Pen-panel {
+  padding: 0.75rem 0.6rem;
+}
+
+.Browser-panel {
+  background-color: var(--frctl-color-white);
+
+  .Code {
+    background-color: var(--frctl-color-white);
+
+    pre {
+      background-color: var(--frctl-color-white);
+      font-size: 14px;
+    }
+  }
+}
+
+.FileBrowser-selectWrapper {
+  background-color: var(--frctl-color-white);
+  border-bottom: 0.13rem solid var(--frctl-color-gray-light);
+}
+
+
+
+.Document-content {
+
+  p code {
+    color: var(--frctl-code-text);
+    background: var(--frctl-code-background);
+    padding: 2px 6px;
+  }
+}
+
+
+// Fractal Statuses
+.frctl-statuses {
+  border: 1px solid var(--frctl-color-gray-border);
+  border-radius: 0.2rem;
+  margin: 32px 0;
+}
+
+.frctl-statuses__header {
+  background-color: var(--frctl-color-primary-theme);
+  border-bottom: 1px solid var(--frctl-color-gray-border);
+}
+
+.Prose h2.frctl-statuses__title {
+  color: var(--frctl-color-primary-theme-text-on-color);
+  font-size: 18px;
+  font-weight: 600;
+  padding: 12px 24px 14px;
+  margin: 0;
+}
+
+.Prose ul.frctl-statuses__items {
+  list-style: none;
+  padding: 0;
+
+  li {
+    list-style-type: none;
+    display: flex;
+    border-bottom: 1px solid var(--frctl-color-gray-border);
+    margin: 0;
+    align-items: center;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+}
+
+.frctl-statuses__item-desc {
+  border-left: 1px solid var(--frctl-color-gray-border);
+  padding: 12px 24px;
+}
+
+.frctl-statuses__item-title {
+  text-align: center;
+  max-width: 250px;
+  flex: 0 0 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 24px;
+}
+
+.Prose h3.Axe--v-title {
+  font-size: 18px;
+}
+
+.Prose h2.Axe--violation-group--title {
+  font-size: 24px;
+}
+
+.Status-dot[title="Prototype"] {
+  background-color: #CB2D17;
+}
+
+.Status-dot[title="WIP"] {
+  background-color: #FF8F61;
+}
+
+.Status-dot[title="Partially Complete"] {
+  background-color: #FFC72F;
+}
+
+.Status-dot[title="Release Candidate"] {
+  background-color: #89C73C;
+}
+
+.Status-dot[title="Ready"] {
+  background-color: #1A901C;
+}
+
+[dir=ltr] .Tree-depth-2 .Tree-collectionLabel {
+  font-weight: 700;
+}

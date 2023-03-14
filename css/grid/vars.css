@@ -1,0 +1,53 @@
+/* =============================================
+                 $ Breakpoints
+============================================= */
+$xs:    480px  !default;
+$sm:    750px  !default;
+$md:    1080px !default;
+$lg:    1280px !default;
+
+
+/* =============================================
+                  $ Variables
+============================================= */
+
+/* Container Settings */
+$content-max-width: 1600px  !default;
+
+/* Grid Layout */
+$grid-columns:         12   !default;
+$grid-mobile-gutter:   15px !default;
+$grid-gutter:          20px !default;
+$grid-mobile-margin:   15px !default;
+$grid-margin:          30px !default;
+
+/* Grid Breakpoints */
+$grid-breakpoint-standard:  $sm !default;
+$grid-breakpoint-max:       resolve($content-max-width + ($grid-gutter * 2));
+$grid-breakpoint-bleed-max: resolve($content-max-width + ($grid-gutter * 2) + (($grid-margin - $grid-gutter) * 2));
+
+$column_breakpoints: (
+  xs: $xs,
+  sm: $sm,
+  md: $md,
+  lg: $lg
+) !default;
+
+/* Sidebar Parent Grid */
+$grid-sidebar-gutter:              40px     !default;
+$grid-sidebar-use-gap:             'false'  !default;
+$grid-sidebar-breakpoint-standard:  $sm     !default;
+$grid-sidebar-primary-columns:      8       !default;
+$grid-sidebar-aside-columns:        4       !default;
+$grid-sidebar-aside-first:          'false' !default;
+
+
+/* =============================================
+                  CSS Variables
+============================================= */
+
+:root {
+  /* Grid */
+  --bc-grid-content-max-width: $content-max-width;
+  --bc-grid-max-width-padding: calc((100vw - (var(--bc-grid-content-max-width)) ) / 2);
+}

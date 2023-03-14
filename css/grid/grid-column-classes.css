@@ -1,0 +1,55 @@
+/**
+ * Create column classes
+ * - example: `o-col-4`, `o-col-sm-4`
+ *
+ */
+@mixin create-column-classes($breakpoint: null) {
+  @for $i from 1 through $grid-columns {
+    @if $breakpoint == null {
+      .o-col-#{$i} {
+        grid-column: span $i / span $i;
+      }
+    } @else {
+      .o-col-#{$breakpoint}-#{$i} {
+        grid-column: span $i / span $i;
+      }
+    }
+  }
+}
+
+@include create-column-classes;
+
+@each $width $breakpoint in $column_breakpoints {
+  @media (min-width: $width) {
+    @include create-column-classes($breakpoint);
+  }
+}
+
+
+/**
+ * Create column offset classes
+ * - example: `o-col-start-4`, `o-col-start-sm-4`
+ *
+ */
+@mixin create-column-offsets($breakpoint: null) {
+  @for $i from 1 through $grid-columns {
+    @if $breakpoint == null {
+      .o-col-start-#{$i} {
+        grid-column-start: $i;
+      }
+    } @else {
+
+      .o-col-start-#{$breakpoint}-#{$i} {
+        grid-column-start: $i;
+      }
+    }
+  }
+}
+
+@include create-column-offsets;
+
+@each $width $breakpoint in $column_breakpoints {
+  @media (min-width: $width) {
+    @include create-column-offsets($breakpoint);
+  }
+}

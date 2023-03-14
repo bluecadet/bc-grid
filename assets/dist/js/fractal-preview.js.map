@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/fractal-assets/fractal-preview.js"],
+  "sourcesContent": ["const getParentClasses = document.querySelectorAll('.fractal-parent-get-classes');\n\ngetParentClasses.forEach(el => {\n  console.log(el);\n  getClasses(el);\n  window.addEventListener('resize', () => {\n    getClasses(el);\n  });\n});\n\n\nfunction getClasses(el) {\n  const parentEl = el.closest('.fractal-parent');\n\n  if ( parentEl ) {\n    const omitClasses = [\n      'fractal-parent',\n      'demo-col',\n    ];\n\n    const parentClasses = parentEl.classList;\n    let classTextString = '';\n\n    parentClasses.forEach(classText => {\n      if ( !omitClasses.includes(classText) ) {\n        classTextString += `.${classText} `;\n      }\n    });\n\n    el.innerHTML = classTextString;\n  }\n}"],
+  "mappings": ";;AAAA,MAAM,mBAAmB,SAAS,iBAAiB,6BAA6B;AAEhF,mBAAiB,QAAQ,QAAM;AAC7B,YAAQ,IAAI,EAAE;AACd,eAAW,EAAE;AACb,WAAO,iBAAiB,UAAU,MAAM;AACtC,iBAAW,EAAE;AAAA,IACf,CAAC;AAAA,EACH,CAAC;AAGD,WAAS,WAAW,IAAI;AACtB,UAAM,WAAW,GAAG,QAAQ,iBAAiB;AAE7C,QAAK,UAAW;AACd,YAAM,cAAc;AAAA,QAClB;AAAA,QACA;AAAA,MACF;AAEA,YAAM,gBAAgB,SAAS;AAC/B,UAAI,kBAAkB;AAEtB,oBAAc,QAAQ,eAAa;AACjC,YAAK,CAAC,YAAY,SAAS,SAAS,GAAI;AACtC,6BAAmB,IAAI;AAAA,QACzB;AAAA,MACF,CAAC;AAED,SAAG,YAAY;AAAA,IACjB;AAAA,EACF;",
+  "names": []
+}

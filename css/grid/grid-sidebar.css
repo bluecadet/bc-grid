@@ -1,0 +1,91 @@
+.o-grid-sidebar {
+  $primaryColWidth: resolve($grid-columns * $grid-sidebar-primary-columns);
+  $asideColWidth:   resolve($grid-columns * $grid-sidebar-primary-columns);
+  $primaryWidth:    resolve($grid-sidebar-primary-columns / $grid-columns);
+  $asideWidth:      resolve($grid-sidebar-aside-columns / $grid-columns);
+
+
+  @media screen and (min-width: $grid-breakpoint-standard) {
+    display: grid;
+
+    @if $grid-sidebar-use-gap == 'true' {
+      gap: 0 $grid-sidebar-gutter;
+    } @else {
+      gap: 0;
+    }
+
+    @if $grid-sidebar-aside-first == 'true' {
+      grid-template-columns:
+        minmax(0, #{$grid-sidebar-aside-columns}fr)
+        minmax(0, #{$grid-sidebar-primary-columns}fr);
+    } @else {
+      grid-template-columns:
+        minmax(0, #{$grid-sidebar-primary-columns}fr)
+        minmax(0, #{$grid-sidebar-aside-columns}fr);
+    }
+
+
+
+  }
+
+
+  @media screen and (min-width: $grid-breakpoint-max) {
+    @if $grid-sidebar-aside-first == 'true' {
+      grid-template-columns:
+        calc( ( ( 100vw - $content-max-width ) / 2 ) + ($content-max-width * #{$asideWidth}) )
+        calc( ( ( 100vw - $content-max-width ) / 2 ) + ($content-max-width * #{$primaryWidth}) );
+    } @else {
+      grid-template-columns:
+        calc( ( ( 100vw - $content-max-width ) / 2 ) + ($content-max-width * #{$primaryWidth}) )
+        calc( ( ( 100vw - $content-max-width ) / 2 ) + ($content-max-width * #{$asideWidth}) );
+    }
+  }
+
+  /* #{$primaryWidth}% #{$asideWidth}%; */
+  /* + ($content-max-width * #{$primaryWidth}) */
+
+}
+
+
+.o-grid-sidebar__main {
+
+  .o-grid {
+    @media screen and (min-width: $grid-sidebar-breakpoint-standard) {
+      @if $grid-sidebar-aside-first == 'true' {
+        @if $grid-sidebar-use-gap == 'true' {
+          padding-left: 0;
+        } @else {
+          padding-left: resolve($grid-sidebar-gutter / 2);
+        }
+      } @else {
+        @if $grid-sidebar-use-gap == 'true' {
+          padding-right: 0;
+        } @else {
+          padding-right: resolve($grid-sidebar-gutter / 2);
+        }
+      }
+    }
+  }
+}
+
+.o-grid-sidebar__aside {
+
+  .o-grid {
+
+    @media screen and (min-width: $grid-sidebar-breakpoint-standard) {
+      @if $grid-sidebar-aside-first == 'true' {
+        @if $grid-sidebar-use-gap == 'true' {
+          padding-right: 0;
+        } @else {
+          padding-right: resolve($grid-sidebar-gutter / 2);
+        }
+      } @else {
+        @if $grid-sidebar-use-gap == 'true' {
+          padding-left: 0;
+        } @else {
+          padding-left: resolve($grid-sidebar-gutter / 2);
+        }
+      }
+    }
+  }
+}
