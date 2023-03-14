@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+    window.frctl = {
+        env: 'static'
+    };
+    </script>
+    <script>var cl = document.querySelector('html').classList; cl.remove('no-js'); cl.add('has-js');</script>
+    <link rel="shortcut icon" href="../dependencies/fractal/fractal_favicon.ico" type="image/ico">
+<style>
+    :root {
+        
+        
+        
+    }
+</style>
+
+<link rel="stylesheet" href="../themes/mandelbrot/css/default.css?cachebust=1.10.3" type="text/css">
+
+<link rel="stylesheet" href="../css/fractal-theme.css?cachebust=1.10.3" type="text/css">
+
+<link rel="stylesheet" href="../themes/mandelbrot/css/highlight.css?cachebust=1.10.3" type="text/css">
+
+
+<title>Variables | BC Grid</title>
+
+</head>
+<body>
+
+
+
+<div class="Frame" id="frame">
+
+    <div class="Frame-header">
+        <div class="Header">
+    <button class="Header-button Header-navToggle" data-action="toggle-sidebar">
+        <div class="Header-navToggleIcon Header-navToggleIcon--open">
+            <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M19 6.4L17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12z"/>
+</svg>
+
+        </div>
+        <div class="Header-navToggleIcon Header-navToggleIcon--closed">
+            <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+</svg>
+
+        </div>
+    </button>
+    <a href="../index.html" class="Header-title" data-pjax>BC Grid</a>
+</div>
+
+    </div>
+
+    <div class="Frame-body" data-role="body">
+
+        <div class="Frame-panel Frame-panel--main" data-role="main">
+            <div class="Frame-inner" id="pjax-container">
+            
+
+<div class="Document">
+
+    <div class="Document-header">
+        
+        <h1 class="Document-title">Variables</h1>
+        
+
+
+        
+    </div>
+
+    <div class="Document-content">
+
+    
+
+<div class="Prose">
+
+
+
+    
+    
+    <h1 id="variable-configuration">Variable Configuration</h1>
+<ul>
+<li><a href="#breakpoint-variables">Breakpoint Variables</a></li>
+<li><a href="#container-max-width">Container Max Width</a></li>
+<li><a href="#grid-columns">Grid Columns</a></li>
+<li><a href="#gutter">Gutter</a></li>
+<li><a href="#grid-margins">Grid Margins</a></li>
+<li><a href="#grid-breakpoint">Grid Breakpoint</a></li>
+<li><a href="#column-breakpoints">Column Breakpoints</a></li>
+<li><a href="#sidebar-grid-variables">Sidebar Grid Variables</a><ul>
+<li><a href="#gutter-and-gap-implementation">Gutter and Gap implementation</a></li>
+<li><a href="#breakpoint">Breakpoint</a></li>
+<li><a href="#wrapper-sizes">Wrapper Sizes</a></li>
+<li><a href="#aside-left-or-right">Aside Left or Right</a></li>
+</ul>
+</li>
+<li><a href="#do-not-alter">DO NOT ALTER</a></li>
+<li><a href="#all-variables">All Variables</a></li>
+</ul>
+<h2 id="breakpoint-variables">Breakpoint Variables</h2>
+<pre><code class="hljs language-scss"><span class="hljs-variable">$xs</span>:    <span class="hljs-number">480px</span>  !default;
+<span class="hljs-variable">$sm</span>:    <span class="hljs-number">750px</span>  !default;
+<span class="hljs-variable">$md</span>:    <span class="hljs-number">1080px</span> !default;
+<span class="hljs-variable">$lg</span>:    <span class="hljs-number">1280px</span> !default;</code></pre><p>These variables are used to define breakpoints for demo purposes. You do not have to use these names, though you will need to replace their values in other variables below.</p>
+<h2 id="container-max-width">Container Max Width</h2>
+<pre><code class="hljs language-scss"><span class="hljs-variable">$content-max-width</span>: <span class="hljs-number">1600px</span> !default; <span class="hljs-comment">// Pixel value</span></code></pre><p>Used to define the max width of the interior (content) section of the grid.</p>
+<h2 id="grid-columns">Grid Columns</h2>
+<pre><code class="hljs language-scss"><span class="hljs-variable">$grid-columns</span>: <span class="hljs-number">12</span> !default; <span class="hljs-comment">// Integer</span></code></pre><p>Defines the number of columns to use</p>
+<h2 id="gutter">Gutter</h2>
+<pre><code class="hljs language-scss"><span class="hljs-variable">$grid-mobile-gutter</span>: <span class="hljs-number">15px</span> !default; <span class="hljs-comment">// Pixel value</span>
+<span class="hljs-variable">$grid-gutter</span>:        <span class="hljs-number">20px</span> !default; <span class="hljs-comment">// Pixel value</span></code></pre><p>Defines the gap between columns. <code>$grid-mobile-gutter</code> will be used until the viewport is wider than the value of <code>$grid-breakpoint-standard</code>, when <code>$grid-gutter</code> will be used.</p>
+<h2 id="grid-margins">Grid Margins</h2>
+<pre><code class="hljs language-scss"><span class="hljs-variable">$grid-mobile-margin</span>: <span class="hljs-number">15px</span> !default; <span class="hljs-comment">// Pixel value</span>
+<span class="hljs-variable">$grid-margin</span>:        <span class="hljs-number">30px</span> !default; <span class="hljs-comment">// Pixel value</span></code></pre><p>Defines the space between the edge of the viewport and edge of the grid. Despite naming, <code>margin</code> is not used, but rather padding or columns depending on the type of grid.</p>
+<p><code>$grid-mobile-margin</code> will be used until the viewport is wider than the value of <code>$grid-breakpoint-standard</code>, when <code>$grid-margin</code> will be used.</p>
+<p><strong>Important note: This value cannot be smaller that the corresponding gutter values</strong> i.e. <code>$grid-mobile-margin</code> cannot be smaller than <code>$grid-mobile-gutter</code>.</p>
+<h2 id="grid-breakpoint">Grid Breakpoint</h2>
+<pre><code class="hljs language-scss"><span class="hljs-variable">$grid-breakpoint-standard</span>: <span class="hljs-variable">$sm</span> !default; <span class="hljs-comment">// Pixel value</span></code></pre><p>Defines the breakpoint between <code>-mobile</code> sizings and non-mobile.</p>
+<h2 id="column-breakpoints">Column Breakpoints</h2>
+<pre><code class="hljs language-scss"><span class="hljs-variable">$column_breakpoints</span>: (
+  xs: <span class="hljs-variable">$xs</span>, // Pixel Value
+  sm: <span class="hljs-variable">$sm</span>,
+  md: <span class="hljs-variable">$md</span>,
+  lg: <span class="hljs-variable">$lg</span>
+) !default;</code></pre><p>SASS Map containing key/value pairs that equate to responsive column names at a given breakpoint. In the default example, th <code>xs</code> key will create columns with classname <code>o-col-xs-[1...12]</code>, and their styles will be implemented at a min screen width of <code>$xs</code>.</p>
+<h2 id="sidebar-grid-variables">Sidebar Grid Variables</h2>
+<h3 id="gutter-and-gap-implementation">Gutter and Gap implementation</h3>
+<pre><code class="hljs language-scss"><span class="hljs-variable">$grid-sidebar-gutter</span>:  <span class="hljs-variable">$grid-gutter</span> !default; <span class="hljs-comment">// Pixel value</span>
+<span class="hljs-variable">$grid-sidebar-use-gap</span>: <span class="hljs-string">&#x27;true&#x27;</span>       !default; <span class="hljs-comment">// String - &#x27;true&#x27; or &#x27;false&#x27;</span></code></pre><p>Define the gap between primary and aside columns. If <code>$grid-sidebar-use-gap</code> is set as <code>true</code>, native grid <code>gap</code> will be used, if <code>false</code> or anything else, padding will be altered on child <code>o-grid</code> elements within the primary and aside wrappers.</p>
+<h3 id="breakpoint">Breakpoint</h3>
+<pre><code class="hljs language-scss"><span class="hljs-variable">$grid-sidebar-breakpoint-standard</span>: <span class="hljs-variable">$sm</span> !default; <span class="hljs-comment">// Pixel value</span></code></pre><p>Min width breakpoint at which the sidebar grid styles are applied</p>
+<h3 id="wrapper-sizes">Wrapper Sizes</h3>
+<pre><code class="hljs language-scss"><span class="hljs-variable">$grid-sidebar-primary-columns</span>: <span class="hljs-number">8</span> !default;
+<span class="hljs-variable">$grid-sidebar-aside-columns</span>:   <span class="hljs-number">4</span> !default;</code></pre><p>How many columns each wrapper should take up. Sizes relvant to base <code>$grid-columns</code> value</p>
+<h3 id="aside-left-or-right">Aside Left or Right</h3>
+<pre><code class="hljs language-scss"><span class="hljs-variable">$grid-sidebar-aside-first</span>:     <span class="hljs-string">&#x27;false&#x27;</span> !default;</code></pre><p>Set to <code>true</code> to have the left wrapper be the <code>$grid-sidebar-aside-columns</code> size and the right wrapper be the <code>$grid-sidebar-primary-columns</code> size (making the ‘sidebar’ appear first on the left). Set to <code>false</code> for the opposite (making the ‘sidebar’ appear second on the right).</p>
+<h2 id="do-not-alter">DO NOT ALTER</h2>
+<pre><code class="hljs language-scss"><span class="hljs-variable">$grid-breakpoint-max</span>:       resolve(<span class="hljs-variable">$content-max-width</span> + (<span class="hljs-variable">$grid-gutter</span> * <span class="hljs-number">2</span>));
+<span class="hljs-variable">$grid-breakpoint-bleed-max</span>: resolve(<span class="hljs-variable">$content-max-width</span> + (<span class="hljs-variable">$grid-gutter</span> * <span class="hljs-number">2</span>) + ((<span class="hljs-variable">$grid-margin</span> - <span class="hljs-variable">$grid-gutter</span>) * <span class="hljs-number">2</span>));</code></pre><p>These are calculated values for the grid and should not be changed, but are the reason why <code>postcss-math</code> is required to compile css with postcss</p>
+<h2 id="all-variables">All Variables</h2>
+<pre><code class="hljs language-scss"><span class="hljs-comment">/* =============================================
+                 $ Breakpoints
+============================================= */</span>
+<span class="hljs-variable">$xs</span>:    <span class="hljs-number">480px</span>  !default;
+<span class="hljs-variable">$sm</span>:    <span class="hljs-number">750px</span>  !default;
+<span class="hljs-variable">$md</span>:    <span class="hljs-number">1080px</span> !default;
+<span class="hljs-variable">$lg</span>:    <span class="hljs-number">1280px</span> !default;
+
+
+<span class="hljs-comment">/* =============================================
+                  $ Variables
+============================================= */</span>
+
+<span class="hljs-comment">/* Container Settings */</span>
+<span class="hljs-variable">$content-max-width</span>: <span class="hljs-number">1600px</span>  !default;
+
+<span class="hljs-comment">/* Grid Layout */</span>
+<span class="hljs-variable">$grid-columns</span>:         <span class="hljs-number">12</span>   !default;
+<span class="hljs-variable">$grid-mobile-gutter</span>:   <span class="hljs-number">15px</span> !default;
+<span class="hljs-variable">$grid-gutter</span>:          <span class="hljs-number">20px</span> !default;
+<span class="hljs-variable">$grid-mobile-margin</span>:   <span class="hljs-number">15px</span> !default;
+<span class="hljs-variable">$grid-margin</span>:          <span class="hljs-number">30px</span> !default;
+
+<span class="hljs-comment">/* Grid Breakpoints */</span>
+<span class="hljs-variable">$grid-breakpoint-standard</span>:  <span class="hljs-variable">$sm</span> !default;
+<span class="hljs-variable">$grid-breakpoint-max</span>:       resolve(<span class="hljs-variable">$content-max-width</span> + (<span class="hljs-variable">$grid-gutter</span> * <span class="hljs-number">2</span>));
+<span class="hljs-variable">$grid-breakpoint-bleed-max</span>: resolve(<span class="hljs-variable">$content-max-width</span> + (<span class="hljs-variable">$grid-gutter</span> * <span class="hljs-number">2</span>) + ((<span class="hljs-variable">$grid-margin</span> - <span class="hljs-variable">$grid-gutter</span>) * <span class="hljs-number">2</span>));
+
+<span class="hljs-variable">$column_breakpoints</span>: (
+  xs: <span class="hljs-variable">$xs</span>,
+  sm: <span class="hljs-variable">$sm</span>,
+  md: <span class="hljs-variable">$md</span>,
+  lg: <span class="hljs-variable">$lg</span>
+) !default;
+
+<span class="hljs-comment">/* Sidebar Parent Grid */</span>
+<span class="hljs-variable">$grid-sidebar-gutter</span>:              <span class="hljs-number">40px</span>     !default;
+<span class="hljs-variable">$grid-sidebar-use-gap</span>:             <span class="hljs-string">&#x27;false&#x27;</span>  !default;
+<span class="hljs-variable">$grid-sidebar-breakpoint-standard</span>:  <span class="hljs-variable">$sm</span>     !default;
+<span class="hljs-variable">$grid-sidebar-primary-columns</span>:      <span class="hljs-number">8</span>       !default;
+<span class="hljs-variable">$grid-sidebar-aside-columns</span>:        <span class="hljs-number">4</span>       !default;
+<span class="hljs-variable">$grid-sidebar-aside-first</span>:          <span class="hljs-string">&#x27;false&#x27;</span> !default;
+
+
+<span class="hljs-comment">/* =============================================
+                  CSS Variables
+============================================= */</span>
+
+<span class="hljs-selector-pseudo">:root</span> {
+  <span class="hljs-comment">/* Grid */</span>
+  --bc-grid-<span class="hljs-attribute">content</span>-<span class="hljs-attribute">max-width</span>: <span class="hljs-variable">$content-max-width</span>;
+  --bc-grid-<span class="hljs-attribute">max-width</span>-<span class="hljs-attribute">padding</span>: calc((<span class="hljs-number">100vw</span> - (var(--bc-grid-content-max-width)) ) / <span class="hljs-number">2</span>);
+}</code></pre>
+    
+
+
+</div>
+
+
+
+    </div>
+
+</div>
+
+
+            </div>
+        </div>
+
+        <div class="Frame-panel Frame-panel--sidebar" data-role="sidebar">
+            
+
+
+<nav class="Navigation" data-behaviour="navigation">
+    <div class="Navigation-panel Navigation-panel--main" data-role="main-panel">
+    
+        
+<div class="Navigation-group">
+
+<div class="Tree" data-behaviour="tree" id="tree-docs">
+    <div class="Tree-header">
+        <h3 class="Tree-title">documentation</h3>
+
+        <button type="button" data-behaviour="collapse-tree" class="Tree-collapse" title="Collapse tree" aria-label="Collapse tree" hidden>
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m9 11c-.6 0-1 .4-1 1s.4 1 1 1h6c.6 0 1-.4 1-1s-.4-1-1-1z"/><path d="m19 21h-14c-1.1 0-2-.9-2-2v-14c0-1.1.9-2 2-2h14c1.1 0 2 .9 2 2v14c0 1.1-.9 2-2 2zm-14-16v14h14v-14z"/></svg>
+
+        </button>
+    </div>
+    <ul class="Tree-items Tree-depth-1">
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
+            <a
+                class="Tree-entityLink"
+                href="./variables.html"
+                data-role="tree-link"
+                
+                data-pjax
+                data-test="variables"
+                data-handle="variables"
+            >
+                <span>Variables</span>
+                
+            </a>
+        </li>
+        
+    
+
+    </ul>
+</div>
+
+</div>
+
+
+    
+        
+
+    
+    
+    <div class="Navigation-group">
+        
+<div class="Tree" data-behaviour="tree" id="tree-components">
+    <div class="Tree-header">
+        <h3 class="Tree-title">components</h3>
+
+        <button type="button" data-behaviour="collapse-tree" class="Tree-collapse" title="Collapse tree" aria-label="Collapse tree" hidden>
+            <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m9 11c-.6 0-1 .4-1 1s.4 1 1 1h6c.6 0 1-.4 1-1s-.4-1-1-1z"/><path d="m19 21h-14c-1.1 0-2-.9-2-2v-14c0-1.1.9-2 2-2h14c1.1 0 2 .9 2 2v14c0 1.1-.9 2-2 2zm-14-16v14h14v-14z"/></svg>
+
+        </button>
+    </div>
+    <ul class="Tree-items Tree-depth-1">
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a
+                class="Tree-entityLink"
+                href="../components/detail/basic-grid.html"
+                data-role="tree-link"
+                
+                data-pjax
+                data-test="basic-grid"
+                data-handle="basic-grid"
+            >
+                <span>Basic Grid</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF8F61;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a
+                class="Tree-entityLink"
+                href="../components/detail/bleed-grid.html"
+                data-role="tree-link"
+                
+                data-pjax
+                data-test="bleed-grid"
+                data-handle="bleed-grid"
+            >
+                <span>Bleed Grid</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF8F61;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a
+                class="Tree-entityLink"
+                href="../components/detail/sidebar-grid.html"
+                data-role="tree-link"
+                
+                data-pjax
+                data-test="sidebar-grid"
+                data-handle="sidebar-grid"
+            >
+                <span>Sidebar Grid</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF8F61;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+    </ul>
+</div>
+
+    </div>
+    
+
+
+    
+    </div>
+
+    
+</nav>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="../themes/mandelbrot/js/mandelbrot.js?cachebust=1.10.3"></script>
+
+
+
+</body>
+</html>

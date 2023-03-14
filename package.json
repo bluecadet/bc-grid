@@ -1,8 +1,9 @@
 {
-  "name": "bc-flatpack",
+  "name": "@bluecadet/bc-grid",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "css/grid.css",
+  "css": "css/grid.css",
   "scripts": {
     "build": "bldr build && fractal build",
     "dev": "bldr watch",

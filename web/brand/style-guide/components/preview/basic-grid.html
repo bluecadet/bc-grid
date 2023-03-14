@@ -1,0 +1,149 @@
+
+
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Default | Styleguide</title>
+		<!-- Styleguide -->
+		<link media="all" rel="stylesheet" href="/css/grid.css">
+		<!-- Fractal Only -->
+		<link media="all" rel="stylesheet" href="/css/fractal-preview.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<div class="frctl-doc-block o-grid">
+  <div class="frctl-doc-block__content o-col-10">
+    <h2>Basic Usage</h2>
+    <p>Use the <code>o-grid</code> class on the wrapping parent. Then use <code>o-col-[columnSize]</code> on internal elements to take up different column widths:</p>
+  </div>
+</div>
+
+<div class="frctl-grid-demo">
+  <div class="o-grid">
+    <div class="o-col-12 fractal-parent"><code class="fractal-code fractal-parent-get-classes"></code></div>
+  </div>
+  <div class="o-grid">
+    <div class="o-col-11 fractal-parent"><code  class="fractal-code fractal-parent-get-classes"></code></div>
+  </div>
+  <div class="o-grid">
+    <div class="o-col-10 fractal-parent"><code  class="fractal-code fractal-parent-get-classes"></code></div>
+  </div>
+  <div class="o-grid">
+    <div class="o-col-9 fractal-parent"><code  class="fractal-code fractal-parent-get-classes"></code></div>
+  </div>
+  <div class="o-grid">
+    <div class="o-col-8 fractal-parent"><code  class="fractal-code fractal-parent-get-classes"></code></div>
+  </div>
+  <div class="o-grid">
+    <div class="o-col-7 fractal-parent"><code  class="fractal-code fractal-parent-get-classes"></code></div>
+  </div>
+  <div class="o-grid">
+    <div class="o-col-6 fractal-parent"><code  class="fractal-code fractal-parent-get-classes"></code></div>
+  </div>
+  <div class="o-grid">
+    <div class="o-col-5 fractal-parent"><code  class="fractal-code fractal-parent-get-classes"></code></div>
+  </div>
+  <div class="o-grid">
+    <div class="o-col-4 fractal-parent"><code  class="fractal-code fractal-parent-get-classes"></code></div>
+  </div>
+  <div class="o-grid">
+    <div class="o-col-3 fractal-parent"><code  class="fractal-code fractal-parent-get-classes"></code></div>
+  </div>
+  <div class="o-grid">
+    <div class="o-col-2 fractal-parent"><code  class="fractal-code fractal-parent-get-classes"></code></div>
+  </div>
+  <div class="o-grid">
+    <div class="o-col-1 fractal-parent"><code  class="fractal-code fractal-parent-get-classes"></code></div>
+  </div>
+  <div class="o-grid">
+  </div>
+</div>
+
+
+<div class="frctl-doc-block o-grid">
+  <div class="frctl-doc-block__content o-col-10">
+    <h2>Wrapping columns</h2>
+    <p>Columns will wrap</p>
+  </div>
+</div>
+
+<div class="frctl-grid-demo">
+  <div class="o-grid">
+    <div class="o-col-sm-4 fractal-parent"><code class="fractal-code fractal-parent-get-classes"></code></div>
+    <div class="o-col-sm-4 fractal-parent"><code class="fractal-code fractal-parent-get-classes"></code></div>
+    <div class="o-col-sm-4 fractal-parent"><code class="fractal-code fractal-parent-get-classes"></code></div>
+    <div class="o-col-sm-6 fractal-parent"><code class="fractal-code fractal-parent-get-classes"></code></div>
+    <div class="o-col-sm-6 fractal-parent"><code class="fractal-code fractal-parent-get-classes"></code></div>
+    <div class="o-col-sm-6 fractal-parent"><code class="fractal-code fractal-parent-get-classes"></code></div>
+    <div class="o-col-sm-6 fractal-parent"><code class="fractal-code fractal-parent-get-classes"></code></div>
+  </div>
+</div>
+
+
+<div class="frctl-doc-block o-grid">
+  <div class="frctl-doc-block__content o-col-10">
+    <h2>Responsive columns</h2>
+    <p>Column sizes can change based on class name. For each breakpoint name and size added to the <code>$column_breakpoints</code> map variable, a column class with that name and width will be avaiable.</p>
+    <p>Example:</p>
+    <pre><code>$column_breakpoints: (
+  sm: 600px,
+  md: 800px,
+  lg: 1000px
+);</code></pre>
+    <p>This map allows for column classes <code>o-col-sm-[columnSize]</code>, <code>o-col-md-[columnSize]</code>, <code>o-col-ld-[columnSize]</code><p>
+  </div>
+</div>
+
+<div class="frctl-grid-demo">
+  <div class="o-grid">
+    <div class="o-col-12 o-col-sm-4 fractal-parent"><code class="fractal-code fractal-parent-get-classes"></code></div>
+    <div class="o-col-12 o-col-sm-4 fractal-parent"><code class="fractal-code fractal-parent-get-classes"></code></div>
+    <div class="o-col-12 o-col-sm-4 fractal-parent"><code class="fractal-code fractal-parent-get-classes"></code></div>
+  </div>
+
+  <div class="o-grid">
+    <div class="o-col-12 o-col-sm-6 o-col-md-3 fractal-parent"><code class="fractal-code fractal-parent-get-classes"></code></div>
+    <div class="o-col-12 o-col-sm-6 o-col-md-3 fractal-parent"><code class="fractal-code fractal-parent-get-classes"></code></div>
+    <div class="o-col-12 o-col-sm-6 o-col-md-3 fractal-parent"><code class="fractal-code fractal-parent-get-classes"></code></div>
+    <div class="o-col-12 o-col-sm-6 o-col-md-3 fractal-parent"><code class="fractal-code fractal-parent-get-classes"></code></div>
+  </div>
+</div>
+
+
+<div class="frctl-doc-block o-grid">
+  <div class="frctl-doc-block__content o-col-10">
+    <h2>Offsetting columns</h2>
+    <p>Column off sets can be controlled via the <code>o-col-start-[columnStart]</code> class.</p>
+    <p>Similar to responsive column classes, offset classes can also be used based according to the <code>$column_breakpoints</code> map variable, with the breakpoint size being before the columnStart value: <code>o-col-start-[breakpoint]-[columnStart]</code></p>
+  </div>
+</div>
+
+<div class="frctl-grid-demo">
+  <div class="o-grid">
+    <div class="o-col-10 o-col-start-2 fractal-parent"><code class="fractal-code fractal-parent-get-classes"></code></div>
+    <div class="o-col-6 o-col-start-3 fractal-parent"><code class="fractal-code fractal-parent-get-classes"></code></div>
+    <div class="o-col-2 fractal-parent"><code class="fractal-code fractal-parent-get-classes"></code></div>
+  </div>
+
+  <div class="o-grid">
+    <div class="o-col-12 o-col-sm-6 o-col-md-3 o-col-start-md-4 fractal-parent"><code class="fractal-code fractal-parent-get-classes"></code></div>
+    <div class="o-col-12 o-col-sm-6 o-col-md-3 fractal-parent"><code class="fractal-code fractal-parent-get-classes"></code></div>
+  </div>
+
+  <div class="o-grid">
+    <div class="o-col-12 o-col-sm-6 o-col-start-md-6 fractal-parent"><code class="fractal-code fractal-parent-get-classes"></code></div>
+  </div>
+</div>
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+		<script src="/js/app.js"></script>
+		<script src="/js/fractal-preview.js"></script>
+	</body>
+</html>
+

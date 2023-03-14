@@ -1,0 +1,48 @@
+
+
+<div class="frctl-doc-block o-grid">
+  <div class="frctl-doc-block__content o-col-10">
+    <h2>Basic Usage</h2>
+    <p>Use the <code>o-bleed-grid</code> class on the wrapping parent.</p>
+    <p>The primary difference between the bleed grid and basic grid is that <strong>bleed grid has columns that run edge to edge</strong> rather than padding, allowing <strong>content</strong> to go to the edge of the viewport.</p>
+    <p><strong>In most cases, basic grid should be favored over bleed grid.</strong></p>
+    <p>Utility column classes (<code>o-col-[columnSize]</code>) can be used, but you will probably need to set a <code>o-col-start-[columnStart]</code> class to offset as needed.</p>
+    <p><strong>Important note:</strong> The Full width grid as (2) columns in addition to the number of columns set in the <code>$grid-columns</code> variable, so keep that in mind when using utility classes. For example, if <code>$grid-columns</code> is set to <code>12</code>, the bleed grid will have 14 columns.</p>
+  </div>
+</div>
+
+<div class="frctl-grid-demo">
+  <div class="o-bleed-grid">
+    <div class="o-col-12 fractal-parent"><code class="fractal-code fractal-parent-get-classes">o-col-12</code></div>
+    <div class="o-col-12 o-col-start-2 fractal-parent"><code class="fractal-code fractal-parent-get-classes">o-col-12</code></div>
+    <div class="o-col-5 fractal-parent"><code class="fractal-code fractal-parent-get-classes">o-col-4</code></div>
+    <div class="o-col-4 fractal-parent"><code class="fractal-code fractal-parent-get-classes">o-col-4</code></div>
+    <div class="o-col-5 fractal-parent"><code class="fractal-code fractal-parent-get-classes">o-col-4</code></div>
+    <div class="o-col-4 o-col-start-2 fractal-parent"><code class="fractal-code fractal-parent-get-classes">o-col-4</code></div>
+    <div class="o-col-4 fractal-parent"><code class="fractal-code fractal-parent-get-classes">o-col-4</code></div>
+    <div class="o-col-4 fractal-parent"><code class="fractal-code fractal-parent-get-classes">o-col-4</code></div>
+  </div>
+</div>
+
+
+<div class="frctl-doc-block o-grid">
+  <div class="frctl-doc-block__content o-col-10">
+    <h2>Example Usage</h2>
+    <p>The bleed grid can implement layouts where content needs to align to specific grid columns, but an image needs to align to the edge:</p>
+  </div>
+</div>
+
+
+<div class="frctl-grid-demo">
+  <div class="o-bleed-grid">
+    <div class="o-col-4 o-col-start-2 frctl-grid-demo__panel"><p>Page Title Content</p></div>
+    <div class="o-col-9 frctl-grid-demo__no-styles"><img src="https://placedog.net/1600" alt="heckin good doggo" style="width: 100%; height: auto;"></div>
+  </div>
+</div>
+
+<div class="frctl-grid-demo">
+  <div class="o-bleed-grid">
+    <div class="o-col-9 frctl-grid-demo__no-styles"><img src="https://placedog.net/1600" alt="heckin good doggo" style="width: 100%; height: auto;"></div>
+    <div class="o-col-4 frctl-grid-demo__panel"><p>Page Title Content</p></div>
+  </div>
+</div>
