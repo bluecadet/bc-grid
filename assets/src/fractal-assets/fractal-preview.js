@@ -1,7 +1,6 @@
 const getParentClasses = document.querySelectorAll('.fractal-parent-get-classes');
 
 getParentClasses.forEach(el => {
-  console.log(el);
   getClasses(el);
   window.addEventListener('resize', () => {
     getClasses(el);
