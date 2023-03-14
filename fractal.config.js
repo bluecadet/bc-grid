@@ -42,7 +42,7 @@ fractal.web.set('static.path', path.join('./assets', 'dist'));
 
 
 // Set Build Directory
-fractal.web.set('builder.dest', path.join('.', 'web', 'brand', 'style-guide'));
+fractal.web.set('builder.dest', path.join('.', 'docs'));
 
 
 // Custom Fractal Theme
