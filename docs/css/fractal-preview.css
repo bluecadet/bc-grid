@@ -150,7 +150,6 @@ textarea{
 }
 abbr[title],
 acronym[title]{
-  -webkit-text-decoration:none;
   text-decoration:none;
 }
 :root{
@@ -171,10 +170,8 @@ acronym[title]{
   --frctl-matrix-square-size:130px;
 }
 .fractal-code{
-  font-family:ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
   font-family:var(--frctl-font-mono);
   background:#eee;
-  color:#e14268;
   color:var(--frctl-color-pink);
   font-size:12px;
   padding:2px;
@@ -229,7 +226,7 @@ acronym[title]{
   background-color:#eee;
   padding:8px;
   font-size:14px;
-  pointer-events:inherit;
+  pointer-events:unset;
   z-index:9999;
 }
 .frctl-section{
@@ -238,7 +235,6 @@ acronym[title]{
 .frctl-section .frctl-section__entry{
     margin-top:20px;
     padding-bottom:20px;
-    border-bottom:0.20px solid #c9c9c9;
     border-bottom:0.20px solid var(--frctl-color-gray-light);
   }
 .frctl-section .frctl-section__entry span{
@@ -251,17 +247,13 @@ acronym[title]{
 .frctl-section .frctl-section__entry-title{
     padding:40px;
     width:60%;
-    border:1px solid #e14268;
     border:1px solid var(--frctl-color-pink);
-    font-family:ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
     font-family:var(--frctl-font-mono);
     margin-bottom:60px;
-    background-color:#c9c9c9;
     background-color:var(--frctl-color-gray-light);
     font-size:14px;
   }
 .fractal-type-size{
-  color:#201D1D;
   color:var(--frctl-color-black);
 }
 .fractal-type-size span{
@@ -340,7 +332,6 @@ acronym[title]{
   border-spacing:0;
   position:relative;
   overflow:scroll;
-  font-family:'Manrope', sans-serif;
   font-family:var(--frctl-font-body);
   margin-bottom:300px;
   font-size:15px;
@@ -354,9 +345,7 @@ acronym[title]{
     white-space:normal;
     border:1px solid #000;
     vertical-align:middle;
-    width:130px;
     width:var(--frctl-matrix-square-size);
-    font-family:'Manrope', sans-serif;
     font-family:var(--frctl-font-title);
   }
 .color-matrix__table tbody tr th{
@@ -368,7 +357,6 @@ acronym[title]{
   }
 .color-matrix__table tbody tr th h4, .color-matrix__table tbody tr th p{
       font-size:14px;
-      font-family:ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
       font-family:var(--frctl-font-mono);
     }
 .color-matrix__table thead{
@@ -380,12 +368,10 @@ acronym[title]{
   }
 .color-matrix__swatch--title h4, .color-matrix__swatch--title p{
     font-size:14px;
-    font-family:ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
     font-family:var(--frctl-font-mono);
   }
 .color-matrix__swatch--title h4 span{
     display:block;
-    font-family:'Manrope', sans-serif;
     font-family:var(--frctl-font-title);
   }
 .color-matrix__corner h3{
@@ -402,11 +388,9 @@ acronym[title]{
   font-size:14px;
   display:flex;
   flex-direction:column;
-  height:130px;
   height:var(--frctl-matrix-square-size);
   justify-content:space-between;
   padding:12px 8px;
-  width:130px;
   width:var(--frctl-matrix-square-size);
   position:relative;
 }
@@ -435,17 +419,13 @@ p.color-matrix__pill{
 p.color-matrix__pill--pass{
 }
 p.color-matrix__pill--fail{
-  color:red !important;
-}
-p.color-matrix__pill--fail{
   border-color:red;
+  color:red !important;
   background:white;
 }
 p.color-matrix__pill--fail--full{
-  color:white !important;
-}
-p.color-matrix__pill--fail--full{
   border-color:white;
+  color:white !important;
   background:red;
 }
 .frctl-grid-ex-min-height{
@@ -454,7 +434,6 @@ p.color-matrix__pill--fail--full{
 .frctl-grid-h1{
   font-size:120%;
   margin:24px auto;
-  -webkit-text-decoration:underline;
   text-decoration:underline;
   font-weight:bold;
   text-align:center;
@@ -462,22 +441,18 @@ p.color-matrix__pill--fail--full{
 .frctl-grid-h3{
   font-size:90%;
   margin:1.20px auto;
-  -webkit-text-decoration:underline;
   text-decoration:underline;
 }
 .frctl-grid-demo [class^='o-col-'], .frctl-grid-demo [class*=' o-col-']{
     text-align:center;
     margin-bottom:20px;
-    background-color:#22458C;
     background-color:var(--frctl-color-primary-theme);
     padding:24px 10px;
     border-radius:4px;
   }
 .frctl-grid-demo [class^='o-col-'] code, .frctl-grid-demo [class*=' o-col-'] code{
       padding:8px;
-      color:#22458C;
       color:var(--frctl-color-primary-theme);
-      background:#ffffff;
       background:var(--frctl-color-white);
       font-size:10px;
       border-radius:4px;
@@ -487,21 +462,19 @@ p.color-matrix__pill--fail--full{
       padding:0;
     }
 .frctl-grid-demo [class^='o-col-'].frctl-grid-demo__panel, .frctl-grid-demo [class*=' o-col-'].frctl-grid-demo__panel{
-      font-family:'Manrope', sans-serif;
       font-family:var(--frctl-font-title);
       font-size:24px;
       font-weight:600;
-      color:#22458C;
       color:var(--frctl-color-primary-theme);
       background:#fff;
       text-align:left;
     }
-.frctl-grid-demo .o-grid-sidebar__main{
+.frctl-grid-demo--sidebar .o-grid-sidebar__main{
     padding-top:32px;
     padding-bottom:32px;
     background-color:rgba(179, 206, 255, 0.5);
   }
-.frctl-grid-demo .o-grid-sidebar__aside{
+.frctl-grid-demo--sidebar .o-grid-sidebar__aside{
     padding-top:32px;
     padding-bottom:32px;
     background-color:rgba(255, 179, 249, 0.5);
@@ -512,13 +485,10 @@ p.color-matrix__pill--fail--full{
 .frctl-doc-block__content{
   border-radius:10px;
   padding:24px 32px;
-  border:2px solid #22458C;
   border:2px solid var(--frctl-color-primary-theme);
-  font-family:'Manrope', sans-serif;
   font-family:var(--frctl-font-body);
 }
 .frctl-doc-block__content h2{
-    font-family:'Manrope', sans-serif;
     font-family:var(--frctl-font-title);
     font-weight:600;
     margin-bottom:10px;
@@ -535,24 +505,19 @@ p.color-matrix__pill--fail--full{
     margin:20px 0;
     padding:10px;
     border-radius:5px;
-    border:1px solid #858585;
     border:1px solid var(--frctl-color-gray-border);
-    background:#404040;
     background:var(--frctl-color-gray-dark);
     line-height:1.2;
   }
 .frctl-doc-block__content pre code{
       padding:0;
-      color:#ffffff;
       color:var(--frctl-color-white);
       background:transparent;
       font-size:14px;
     }
 .frctl-doc-block__content code{
-    font-family:ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
     font-family:var(--frctl-font-mono);
     background:#eee;
-    color:#22458C;
     color:var(--frctl-color-primary-theme);
     font-size:12px;
     padding:2px;

@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": ["../../src/js/app.js"],
-  "sourcesContent": ["(() => {\n  console.log('hi');\n})()"],
-  "mappings": ";;AAAA,GAAC,MAAM;AACL,YAAQ,IAAI,IAAI;AAAA,EAClB,GAAG;",
+  "sourcesContent": ["(() => {\n  // console.log('hi');\n})()"],
+  "mappings": ";;AAAA,GAAC,MAAM;AAAA,EAEP,GAAG;",
   "names": []
 }

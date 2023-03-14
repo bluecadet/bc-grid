@@ -4,7 +4,6 @@
 }
 .o-grid{
   display:grid;
-  grid-gap:0 15px;
   gap:0 15px;
   grid-template-columns:repeat(12, 1fr);
   padding-left:15px;
@@ -20,15 +19,12 @@
   }
 @media screen and (min-width: 1640px){
 .o-grid{
-    padding-left:calc((100vw - (1600px) ) / 2);
     padding-left:var(--bc-grid-max-width-padding);
-    padding-right:calc((100vw - (1600px) ) / 2);
     padding-right:var(--bc-grid-max-width-padding)
 }
   }
 .o-bleed-grid{
   display:grid;
-  grid-gap:0 15px;
   gap:0 15px;
   grid-template-columns:[bleed-start] calc(15px - 15px) [main-start] repeat(5, 1fr) [main-end] calc(15px - 15px) [bleed-end];
 }
@@ -472,7 +468,6 @@
 @media screen and (min-width: 750px){
 .o-grid-sidebar{
     display:grid;
-      grid-gap:0;
       gap:0;
       grid-template-columns:minmax(0, 8fr) minmax(0, 4fr)
 

@@ -25,7 +25,7 @@
 <link rel="stylesheet" href="./themes/mandelbrot/css/highlight.css?cachebust=1.10.3" type="text/css">
 
 
-<title>BC Grid | BC Grid</title>
+<title>BC Grid Overview | BC Grid</title>
 
 </head>
 <body>
@@ -67,7 +67,7 @@
 
     <div class="Document-header">
         
-        <h1 class="Document-title">BC Grid</h1>
+        <h1 class="Document-title">BC Grid Overview</h1>
         
 
 
@@ -82,59 +82,45 @@
 
 
 
-
-
-<p>You can browse the component library using the navigation on the left.</p>
-
-<h3>Component statuses</h3>
-<p>Components and their variants have been given statuses reflecting their state of completion. The available statuses are listed below.</p>
-<table>
-<tr>
-    <th>Label</th>
-    <th>Description</th>
-</tr>
-
-<tr>
-    <td>
-
-<div class="Status Status--tag">
-
-<label class="Status-label" style="background-color: #CB2D17; border-color: #CB2D17;">Prototype</label>
-
-</div>
-
-</td>
-    <td>Do not implement.</td>
-</tr>
-
-<tr>
-    <td>
-
-<div class="Status Status--tag">
-
-<label class="Status-label" style="background-color: #FF8F61; border-color: #FF8F61;">WIP</label>
-
-</div>
-
-</td>
-    <td>Work in progress, subject to changes.</td>
-</tr>
-
-<tr>
-    <td>
-
-<div class="Status Status--tag">
-
-<label class="Status-label" style="background-color: #1A901C; border-color: #1A901C;">Ready</label>
-
-</div>
-
-</td>
-    <td>Ready to implement.</td>
-</tr>
-
-</table>
-
+    
+    
+    <h1 id="bc-grid">BC Grid</h1>
+<p>A css-grid framework.</p>
+<h2 id="installation">Installation</h2>
+<ul>
+<li>Copy <code>.css/*</code> to project</li>
+<li>Import the <code>grid.css</code> file, or import individual files from <code>css/grid</code> as needed.<ul>
+<li>At a minimum, you will need to import the following in order:<ul>
+<li>Variables file: <code>css/grid/vars.css</code> (setups up variables, which you can change as needed)</li>
+<li>Grid layout file(s): <code>css/grid/[grid-basic/grid-bleed/grid-sidebar as needed]</code></li>
+<li>Column classes: <code>css/grid/column-classes.css</code> (setups up variables)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="required-postcss-packages">Required POSTCSS Packages:</h2>
+<ul>
+<li><a href="https://www.npmjs.com/package/postcss-easy-import">postcss-easy-import</a></li>
+<li><a href="https://www.npmjs.com/package/postcss-advanced-variables">postcss-advanced-variables</a></li>
+<li><a href="https://www.npmjs.com/package/postcss-math">postcss-math</a></li>
+<li><a href="https://www.npmjs.com/package/postcss-nested">postcss-nested</a></li>
+</ul>
+<p>Minimal Bldr postcss config:</p>
+<pre><code class="hljs language-js"><span class="hljs-built_in">module</span>.exports = <span class="hljs-function">(<span class="hljs-params">ctx</span>) =&gt;</span> ({
+  <span class="hljs-attr">plugins</span>: [
+    <span class="hljs-string">&#x27;postcss-easy-import&#x27;</span>: {
+      <span class="hljs-attr">prefix</span>: <span class="hljs-literal">false</span>,
+      <span class="hljs-attr">skipDuplicates</span>: <span class="hljs-literal">false</span>,
+      <span class="hljs-attr">warnOnEmpty</span>: <span class="hljs-literal">false</span>,
+    },
+    <span class="hljs-string">&#x27;postcss-advanced-variables&#x27;</span>: {},
+    <span class="hljs-string">&#x27;postcss-math&#x27;</span>: {},
+    <span class="hljs-string">&#x27;postcss-nested&#x27;</span>: {},
+  ]
+});
+</code></pre>
+    
 
 
 </div>
@@ -169,6 +155,26 @@
         </button>
     </div>
     <ul class="Tree-items Tree-depth-1">
+        
+    
+        
+        
+        
+        
+        <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
+            <a
+                class="Tree-entityLink"
+                href="./index.html"
+                data-role="tree-link"
+                
+                data-pjax
+                data-test="index"
+                data-handle="index"
+            >
+                <span>Overview</span>
+                
+            </a>
+        </li>
         
     
         
