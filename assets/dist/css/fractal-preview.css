@@ -469,12 +469,12 @@ p.color-matrix__pill--fail--full{
       background:#fff;
       text-align:left;
     }
-.frctl-grid-demo .o-grid-sidebar__main{
+.frctl-grid-demo--sidebar .o-grid-sidebar__main{
     padding-top:32px;
     padding-bottom:32px;
     background-color:rgba(179, 206, 255, 0.5);
   }
-.frctl-grid-demo .o-grid-sidebar__aside{
+.frctl-grid-demo--sidebar .o-grid-sidebar__aside{
     padding-top:32px;
     padding-bottom:32px;
     background-color:rgba(255, 179, 249, 0.5);

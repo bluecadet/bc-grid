@@ -405,6 +405,9 @@ p.color-matrix__pill--fail--full {
       text-align: left;
     }
   }
+}
+
+.frctl-grid-demo--sidebar {
 
   .o-grid-sidebar__main {
     padding-top: 32px;
