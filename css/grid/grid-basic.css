@@ -20,3 +20,17 @@
     padding-right: var(--bc-grid-max-width-padding);
   }
 }
+
+.o-grid--no-gap {
+  gap: 0 0;
+
+  /* [class^='o-col-'], [class*=' o-col-'] {
+    padding-left: resolve($grid-mobile-gutter / 2);
+    padding-right: resolve($grid-mobile-gutter / 2);
+
+    @media screen and (min-width: $grid-breakpoint-standard) {
+      padding-left: resolve($grid-gutter / 2);
+      padding-right: resolve($grid-gutter / 2);
+    }
+  } */
+}

@@ -1,3 +1,9 @@
+---
+title: Variables
+order: 4
+label: 'Variables'
+---
+
 # Variable Configuration
 
 - [Breakpoint Variables](#breakpoint-variables)

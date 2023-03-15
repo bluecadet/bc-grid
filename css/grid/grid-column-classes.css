@@ -53,3 +53,18 @@
     @include create-column-offsets($breakpoint);
   }
 }
+
+
+/**
+ * Create column offset reset classes
+ * - example: `o-col-start-4`, `o-col-start-sm-4`
+ *
+ */
+
+@each $width $breakpoint in $column_breakpoints {
+  @media (min-width: $width) {
+    .o-col-start-reset-#{$breakpoint} {
+      grid-column-start: auto;
+    }
+  }
+}

@@ -1,5 +1,7 @@
 ---
 title: BC Grid Overview
+order: 1
+label: 'BC Grid Overview'
 ---
 
 # BC Grid

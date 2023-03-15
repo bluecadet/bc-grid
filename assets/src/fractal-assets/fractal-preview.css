@@ -407,6 +407,21 @@ p.color-matrix__pill--fail--full {
   }
 }
 
+.frctl-grid-demo--no-gap {
+
+  [class^='o-col-'], [class*=' o-col-'] {
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: var(--frctl-color-primary-theme);
+    border-radius: 0;
+  }
+
+  .frctl-grid-demo__inner-content {
+    padding: 20px;
+    background: #EFEFEF;
+  }
+}
+
 .frctl-grid-demo--sidebar {
 
   .o-grid-sidebar__main {
