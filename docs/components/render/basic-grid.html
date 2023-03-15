@@ -159,4 +159,42 @@
   </div>
 </div>
 
+<div class="frctl-doc-block o-grid">
+  <div class="frctl-doc-block__content o-col-10">
+    <h2>Resetting column offsets</h2>
+    <p>Column offsets can be reset via the <code>o-col-start-reset</code> class, which is also available as <code>o-col-start-reset-[breakpoint]</code>, matching key names from <code>$column_breakpoints</code>.</p>
+  </div>
+</div>
+
+<div class="frctl-grid-demo">
+  <div class="o-grid">
+    <div class="o-col-8 o-col-start-3 o-col-md-4 o-col-start-reset-md fractal-parent"><code class="fractal-code fractal-parent-get-classes"></code></div>
+    <div class="o-col-8 o-col-start-3 o-col-md-4 o-col-start-reset-md fractal-parent"><code class="fractal-code fractal-parent-get-classes"></code></div>
+    <div class="o-col-8 o-col-start-3 o-col-md-4 o-col-start-reset-md fractal-parent"><code class="fractal-code fractal-parent-get-classes"></code></div>
+  </div>
+</div>
+
+<div class="frctl-doc-block o-grid">
+  <div class="frctl-doc-block__content o-col-10">
+    <h2>No Gap Grid</h2>
+    <p>Add the <code>o-grid--no-gap</code> class to set the native grid <code>gap</code> selector to zero.</p>
+    <p>This class removes the gap from the grid, and adds padding to the columns. This allows the columns to have edge to edge color, but keep content inline with the grid.</p>
+  </div>
+</div>
+
+<div class="frctl-grid-demo frctl-grid-demo--no-gap">
+  <div class="o-grid" style="margin-bottom: 50px;">
+    <div class="o-col-12"><code class="fractal-code">.o-grid wrapper</code></div>
+    <div class="o-col-12 o-col-sm-4 fractal-parent"><div class="frctl-grid-demo__inner-content"><code class="fractal-code fractal-parent-get-classes"></code></div></div>
+    <div class="o-col-12 o-col-sm-4 fractal-parent"><div class="frctl-grid-demo__inner-content"><code class="fractal-code fractal-parent-get-classes"></code></div></div>
+    <div class="o-col-12 o-col-sm-4 fractal-parent"><div class="frctl-grid-demo__inner-content"><code class="fractal-code fractal-parent-get-classes"></code></div></div>
+  </div>
+  <div class="o-grid o-grid--no-gap">
+    <div class="o-col-12"><code class="fractal-code">.o-grid.o-grid--no-gap wrapper</code></div>
+    <div class="o-col-12 o-col-sm-4 fractal-parent"><div class="frctl-grid-demo__inner-content"><code class="fractal-code fractal-parent-get-classes"></code></div></div>
+    <div class="o-col-12 o-col-sm-4 fractal-parent" style="background: #E5CD73 !important"><div class="frctl-grid-demo__inner-content"><code class="fractal-code fractal-parent-get-classes"></code></div></div>
+    <div class="o-col-12 o-col-sm-4 fractal-parent"><div class="frctl-grid-demo__inner-content"><code class="fractal-code fractal-parent-get-classes"></code></div></div>
+  </div>
+</div>
+
 

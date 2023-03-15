@@ -469,6 +469,16 @@ p.color-matrix__pill--fail--full{
       background:#fff;
       text-align:left;
     }
+.frctl-grid-demo--no-gap [class^='o-col-'], .frctl-grid-demo--no-gap [class*=' o-col-']{
+    text-align:center;
+    margin-bottom:20px;
+    background-color:var(--frctl-color-primary-theme);
+    border-radius:0;
+  }
+.frctl-grid-demo--no-gap .frctl-grid-demo__inner-content{
+    padding:20px;
+    background:#EFEFEF;
+  }
 .frctl-grid-demo--sidebar .o-grid-sidebar__main{
     padding-top:32px;
     padding-bottom:32px;
